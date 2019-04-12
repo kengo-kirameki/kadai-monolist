@@ -28,10 +28,10 @@ class OwnershipsController < ApplicationController
     
     if params[:type] == 'Want'
       current_user.unwant(@item)
-      flash[:succeces] = '商品のWantを解除しました。'
+      flash[:success] = '商品のWantを解除しました。'
     else
       current_user.unhave(@item)
-      flash[:succeces] = '商品のhaveを解除しました。'
+      flash[:success] = '商品のhaveを解除しました。'
     end
     
     redirect_back(fallback_location: root_path)
